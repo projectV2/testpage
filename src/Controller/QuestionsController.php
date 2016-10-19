@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Core\Configure;
+use Cake\Event\Event;
 
 /**
  * Questions Controller
@@ -11,6 +13,15 @@ use App\Controller\AppController;
 class QuestionsController extends AppController
 {
 
+
+    public function beforeRender(Event $event)
+    {
+//        $this->viewBuilder()->layout('AdminLTE.boxed_custom');
+        $this->viewBuilder()->layout('Users/boxed_custom');
+	    // $this->autoRender = false;
+        $this->set('theme', Configure::read('Theme'));
+    }
+
     /**
      * Index method
      *
@@ -18,6 +29,7 @@ class QuestionsController extends AppController
      */
     public function index()
     {
+	// $this->viewBuilder()->theme('AdminLTE');
         $questions = $this->paginate($this->Questions);
 
         $this->set(compact('questions'));
