@@ -223,3 +223,10 @@ if (Configure::read('debug')) {
 }
 
 Plugin::load('Migrations');
+
+Plugin::load('CakeDC/Users', ['routes' => true, 'bootstrap' => true]);
+
+Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
+
+//Plugin::load('AlmaSaeed2010/AdminLTE', ['bootstrap' => true, 'routes' => true]);
+//Plugin::loadAll();

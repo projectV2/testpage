@@ -28,6 +28,9 @@ use Cake\Event\Event;
 class AppController extends Controller
 {
 
+
+    //public $theme = "AdminLTE";
+
     /**
      * Initialization hook method.
      *
@@ -43,6 +46,8 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+	// $this->loadComponent('CakeDC/Users.UsersAuth');
+	// $this->loadComponent('Almasaeed2010/Adminlte');
     }
 
     /**
@@ -53,10 +58,13 @@ class AppController extends Controller
      */
     public function beforeRender(Event $event)
     {
+	$this->viewBuilder()->theme('AdminLTE');
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
             $this->set('_serialize', true);
         }
+
+	//$this->set('theme', Configure::read('Theme'));
     }
 }
