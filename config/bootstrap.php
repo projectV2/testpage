@@ -230,3 +230,20 @@ Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
 
 //Plugin::load('AlmaSaeed2010/AdminLTE', ['bootstrap' => true, 'routes' => true]);
 //Plugin::loadAll();
+
+
+Configure::write('Theme', [
+    'title' => 'AdminLTE',
+    'logo' => [
+        'mini' => '<b>A</b>LT',
+        'large' => '<b>Admin</b>LTE'
+    ],
+    'login' => [
+        'show_remember' => true,
+        'show_register' => true,
+        'show_social' => true
+    ]
+]);
+
+
+
