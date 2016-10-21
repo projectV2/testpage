@@ -1,3 +1,5 @@
+<?php /*
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -38,7 +40,11 @@
         <p><?= $this->Paginator->counter() ?></p>
     </div>
 </div>
+*/
+?>
 
+<div class="questions index large-9 medium-8 columns content">
+    <h3><?= __('Questions') ?></h3>
 <div class="raw">
 <div class="col-md-3">
 <div class="box box-primary direct-chat direct-chat-primary">
@@ -108,4 +114,8 @@
   </div><!-- /.box-footer-->
 </div><!--/.direct-chat -->
 </div> <!--col-md-3 class-->
+
+
+
 </div> <!--raw class-->
+    </div> <!-- questions -->

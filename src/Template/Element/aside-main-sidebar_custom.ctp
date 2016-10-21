@@ -11,14 +11,14 @@ if (file_exists($file)) {
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
         <!-- Sidebar user panel -->
-        <?php echo $this->element('AdminLTE.aside/user-panel'); ?>
+        <?php echo $this->element('aside/user-panel_cust'); ?>
 
         <!-- search form -->
-        <?php echo $this->element('AdminLTE.aside/form'); ?>
+        <?php echo $this->element('aside/form_cust'); ?>
         <!-- /.search form -->
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
-        <?php echo $this->element('AdminLTE.aside/sidebar-menu_custom'); ?>
+        <?php echo $this->element('aside/sidebar-menu_custom'); ?>
 
     </section>
     <!-- /.sidebar -->

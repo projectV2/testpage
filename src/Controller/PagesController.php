@@ -62,4 +62,11 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+    public function admineExample()
+    {
+        $this->viewBuilder()->theme('AdminLTE');
+//        $this->viewBuilder()->layout('AdminLTE');
+        $this->render(false);
+    }
 }
